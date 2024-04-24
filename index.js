@@ -93,20 +93,20 @@ const content = "I love node js";
 // });
 
 // // Nested Operations using Promises(Async/ Await)
-const writingInFile = async () => {
-  try {
-    await fsPromise.writeFile(textFile, "\n Hello Node js", {
-      // Options object with flag at the end
-      flag: "a+",
-    });
-    await fsPromise.appendFile(textFile, "\n This is append file")
-    await fsPromise.appendFile(textFile, "\n This is append file1")
+// const writingInFile = async () => {
+//   try {
+//     await fsPromise.writeFile(textFile, "\n Hello Node js", {
+//       // Options object with flag at the end
+//       flag: "a+",
+//     });
+//     await fsPromise.appendFile(textFile, "\n This is append file")
+//     await fsPromise.appendFile(textFile, "\n This is append file1")
 
-    await fs.promises.rename(textFile, path.join(__dirname, "files", "newText.txt"))
-    const data = await fsPromise.readFile(textFile, "utf-8")
-    console.log(data);
-  } catch (err) {
-    console.log(err);
-  }
-};
-writingInFile();
+//     await fs.promises.rename(textFile, path.join(__dirname, "files", "newText.txt"))
+//     const data = await fsPromise.readFile(textFile, "utf-8")
+//     console.log(data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
+// writingInFile();
